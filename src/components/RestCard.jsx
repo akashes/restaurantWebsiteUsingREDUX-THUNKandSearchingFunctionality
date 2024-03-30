@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 
-function RestCard({name,image,cusine,address,id}) {
+function RestCard({name,image,cusine,address,id,neighborhood}) {
     const navigate = useNavigate()
   return (
     <div onClick={()=>navigate(`/view/${id}`)} style={{height:'500px'}}  className=' m-5'>
@@ -11,6 +11,7 @@ function RestCard({name,image,cusine,address,id}) {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
+          <p>place : {neighborhood}</p>
             <p>Cusine : {cusine}</p>
             <p>Address : {address}</p>
          

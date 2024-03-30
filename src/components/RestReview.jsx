@@ -19,7 +19,7 @@ function RestReview({review}) {
         </Offcanvas.Header>
         <Offcanvas.Body>
             {
-                review.length>0 ? 
+                review?.length>0 ? 
                 review.map((ele)=>{
                     return(
                     //     <Card className='my-5'>
